@@ -1,0 +1,1 @@
+var BasicCard = require("./.js");
