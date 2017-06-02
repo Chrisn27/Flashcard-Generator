@@ -1,12 +1,17 @@
 var BasicCard = require("./BasicCard.js");
 var ClozeCard = require("./ClozeCard.js");
 
-var firstCard = new BasicCard("Who won game 1 of the 2017 Stanley Cup Finals?", "Pittsburgh Penguins")
+var basicCardTest = new BasicCard("Who wrong the hit single, 'Shake it off'", "Taylor Swift");
+console.log("---Basic Card Test---");
+console.log("Front: " + basicCardTest.front + "\nBack: " + basicCardTest.back);
+console.log("-------------------------------------------------------------------");
 
-var readBasic = function() {
-    console.log("Front: " + firstCard.front + "\nBack: " + firstCard.back);
-}
+var clozeCardTest = new ClozeCard("It's like I got this music in my mind", "It's like I got this");
 
+console.log("---ClozeCard Tests---");
+console.log("Full Text: " + clozeCardTest.fullText + " Cloze: " + clozeCardTest.cloze);
+console.log("Partial: " + clozeCardTest.partial);
+console.log("-------------------------------------------------------------------");
 
-readBasic();
-
+console.log("---ClozeCard Error Checking---")
+var clozeCardError = new ClozeCard("Saying it's gonna be alright", "Cause the players gonna play, play, play, play, play");
